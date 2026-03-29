@@ -21,8 +21,8 @@ public class ConfigReader {
         return property.getProperty("browser","chrome");
     }
     
-    public static String getHeadless(){
-        return property.getProperty("headless","false");
+    public static boolean getHeadless(){
+        return Boolean.getBoolean(property.getProperty("headless","false"));
     }
 
     public static String getGridUrl(){
