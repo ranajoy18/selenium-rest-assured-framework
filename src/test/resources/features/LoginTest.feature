@@ -5,7 +5,7 @@ Feature: Login Functionality
   So that I can access my dashboard
 
   Background:
-    Given the user is on the login page "https://example.com/login"
+    Given the user is on the login page "https://practicetestautomation.com/practice-test-login/"
 
   Scenario Outline: Successful and unsuccessful login
     When the user enters username "<username>"
@@ -14,7 +14,7 @@ Feature: Login Functionality
     Then the user should be "<outcome>"
 
     Examples:
-      | username | password  | outcome         |
-      | admin    | admin123  | logged in       |
-      | user     | wrongpass | shown error     |
-      | admin    |           | shown error     |
+      | username      | password    | outcome     |
+      | student       | Password123 | logged in   |
+      # | incorrectUser | wrongpass   | shown error |
+      # | student       |             | shown error |

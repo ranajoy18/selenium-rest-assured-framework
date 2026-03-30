@@ -1,33 +1,48 @@
 package stepDefinations;
 
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import common.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.LoginPage;
 
 public class LoginTestSD {
 
+    private WebDriver driver;
+    private LoginPage loginPage;
+    private String urlBeforeLogin;
+    
     @Given("the user is on the login page {string}")
     public void the_user_is_on_the_login_page(String string) {
-        System.out.println("Inside step1");
+        driver=DriverManager.getWebDriver();
+        driver.get(string);
+        urlBeforeLogin=driver.getCurrentUrl();
+        loginPage=new LoginPage(driver);
     }
 
     @When("the user enters username {string}")
     public void the_user_enters_username(String string) {
-        System.out.println("Inside step2");
+       loginPage.enterUserName(string);
     }
 
     @When("the user enters password {string}")
     public void the_user_enters_password(String string) {
-        System.out.println("Inside step3");
+        loginPage.enterPassword(string);
     }
 
     @When("the user clicks the login button")
     public void the_user_clicks_the_login_button() {
-        System.out.println("Inside step4");
+        loginPage.clickSubmit();
     }
 
     @Then("the user should be {string}")
     public void the_user_should_be(String string) {
-        System.out.println("Inside step5");
+       if(string.equalsIgnoreCase("success")){
+        String urlAfterLogin=driver.getCurrentUrl();
+        Assert.assertNotEquals(urlAfterLogin, urlBeforeLogin);
+       }
     }
 }
