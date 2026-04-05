@@ -48,7 +48,9 @@ public class DriverFactory {
 
     private static ChromeOptions buildChromeOptions(boolean headless) {
         ChromeOptions option=new ChromeOptions();
-        option.addArguments("--headless=new");
+        if(headless){
+            option.addArguments("--headless=new");
+        }
         return option;
     }
 

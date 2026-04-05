@@ -13,7 +13,7 @@ public class LoginPage {
     @FindBy(xpath="//input[@name='password']")
     WebElement password;
 
-    @FindBy(xpath="/button[@id='submit']")
+    @FindBy(xpath="//button[@id='submit']")
     WebElement submitButton;
 
     public LoginPage(WebDriver driver){

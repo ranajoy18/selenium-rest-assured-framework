@@ -1,17 +1,17 @@
 package common;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import java.time.Duration;
+
 
 public class BaseTest {
 
-    @BeforeTest
-    public void setUp(){
+    public static void setUp(){
         DriverManager.setWebDriver(DriverFactory.createWebDriver());
-        DriverManager.getWebDriver().manage().window().fullscreen();
+        DriverManager.getWebDriver().manage().window().maximize();
+        DriverManager.getWebDriver().manage().timeouts()
+                .implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @AfterTest
     public void quitDriver(){
         DriverManager.quitDriver();
     }
