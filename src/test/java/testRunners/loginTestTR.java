@@ -1,16 +1,16 @@
 package testRunners;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
 @CucumberOptions(
     features = "src/test/resources/features/LoginTest.feature",
     glue = "stepDefinations",
-    plugin = {"pretty", "html:target/cucumber-reports/LoginReport.html"},
-    monochrome = true,
-    dryRun = false
+    plugin = {
+        "pretty",
+        "html:target/cucumber-reports/LoginReport.html"
+    },
+    monochrome = true
 )
-public class loginTestTR {
+public class LoginTestTR extends AbstractTestNGCucumberTests {
 }

@@ -30,15 +30,15 @@
   </dependencyManagement>
 
   <dependencies>
-    <dependency>
+    <!-- <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-    </dependency>
+    </dependency> -->
     <!-- Optionally: parameterized tests support -->
-    <dependency>
+    <!-- <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
-    </dependency>
+    </dependency> -->
     <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -53,9 +53,9 @@
       <version>7.12.0</version>
     </dependency>
     <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>7.11.0</version>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.14.0</version>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
