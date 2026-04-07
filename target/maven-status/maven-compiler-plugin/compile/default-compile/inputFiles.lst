@@ -1,2 +1,7 @@
 /Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/com/testautomation/App.java
-/Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/stepDefinations/LoginTestSD.java
+/Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/common/BaseTest.java
+/Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/common/ConfigReader.java
+/Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/common/DriverFactory.java
+/Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/common/DriverManager.java
+/Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/pageObjects/LoginPage.java
+/Users/ranajoydas/Projects/Automation/selenium-restassured-framework/src/main/java/stepDefinitions/LoginTestSD.java

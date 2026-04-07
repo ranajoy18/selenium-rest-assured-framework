@@ -1,2 +1,7 @@
-stepDefinations/LoginTestSD.class
+stepDefinitions/LoginTestSD.class
 com/testautomation/App.class
+common/DriverFactory.class
+pageObjects/LoginPage.class
+common/DriverManager.class
+common/BaseTest.class
+common/ConfigReader.class

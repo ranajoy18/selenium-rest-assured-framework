@@ -1,10 +1,10 @@
-package stepDefinations;
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import common.BaseTest;
 import common.DriverManager;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,10 +15,14 @@ public class LoginTestSD {
     private WebDriver driver;
     private LoginPage loginPage;
     private String urlBeforeLogin;
-    
-    @Given("the user is on the login page {string}")
-    public void the_user_is_on_the_login_page(String string) {
+
+    @Before
+    public void initialize(){
         BaseTest.setUp();
+    }
+    
+@Given("the user is on the login page {string}")
+    public void the_user_is_on_the_login_page(String string) {
         driver=DriverManager.getWebDriver();
         driver.get(string);
         urlBeforeLogin=driver.getCurrentUrl();

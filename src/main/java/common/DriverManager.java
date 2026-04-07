@@ -2,6 +2,7 @@ package common;
 
 import org.openqa.selenium.WebDriver;
 
+
 public class DriverManager {
 
     private static final ThreadLocal<WebDriver>  driverThread=new ThreadLocal<>();
@@ -15,9 +16,12 @@ public class DriverManager {
     }
 
     public static void quitDriver(){
+        System.out.println("Quitting driver...");
         if(driverThread.get()!=null){
             driverThread.get().quit();
             driverThread.remove();
+        } else {
+            System.out.println("Driver is null");
         }
     }
 }
